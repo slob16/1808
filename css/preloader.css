@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=IBM+Plex+Mono&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Use variables defined in the main style.css or define fallbacks */
+:root {
+  --preloader-bg: rgb(60, 66, 55); /* Example fallback */
+  --preloader-fg: rgb(230, 225, 215); /* Example fallback */
+  --preloader-margin: 32px; /* Example fallback */
+  --main-bg: #c0c0c0; /* Assuming this is the default main page background */
+  --main-fg: #1c2526; /* Assuming this is the default main page foreground */
+}
+
+/* Preloader specific styles */
+.preloader-body-hidden {
+  overflow: hidden !important; /* Prevent scrolling while preloader is active */
+}
+
+.main-content-hidden {
+  /* display: none; /* Hide main content initially */
+  /* visibility: hidden; */
+  opacity: 0; /* Use opacity for smoother transition */
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none; /* Prevent interaction */
+}
+
+.main-content-visible {
+ /* display: block; */
+ /* visibility: visible; */
+ opacity: 1;
+ pointer-events: auto;
+}
+
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--main-bg, var(--preloader-bg)); /* Use main bg as default */
+  z-index: 10000 !important; /* Ensure it's on top, use !important if needed */
+}
+
+.progress-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100vh;
+  /* Use CSS variables from main style if available, otherwise use fallbacks */
+  background: var(--main-fg, var(--preloader-fg)); /* Use main fg as default */
+}
+
+.percentage-wrap {
+ position: fixed;
+ bottom: var(--preloader-margin);
+ left: var(--preloader-margin);
+ /* Add necessary styles if not inheriting */
+ z-index: 10001; /* Above progress bar */
+}
+
+.percentage {
+  /* position: fixed; */ /* Changed from fixed */
+  /* bottom: var(--preloader-margin);
+  left: var(--preloader-margin); */
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 25rem; /* Adjust as needed */
+  line-height: 0.8;
+  /* Use CSS variables from main style if available, otherwise use fallbacks */
+  color: #ffffff; /* Set base color to white for difference blend mode */
+  mix-blend-mode: difference;
+  transform-origin: left center;
+ /* z-index: 10001; /* Above progress bar */
+}
+
+.text-container {
+  height: 3em;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  width: 200px; /* Adjust as needed */
+  text-align: center;
+  z-index: 10001; /* Above progress bar */
+}
+
+.loading-text {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  /* Use CSS variables from main style if available, otherwise use fallbacks */
+  /* color: var(--main-bg, var(--preloader-bg)); /* REMOVED - Will be set dynamically */
+  font-size: 1.5rem; /* Adjust as needed */
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  mix-blend-mode: difference;
+}
+
+.loading-text.initial {
+  transform: translateY(0);
+}
+
+.loading-text.complete {
+  transform: translateY(100%);
+}
+
+.loading-text .char {
+  display: inline-block;
+}
+
+/* Remove content styles as they are specific to the demo */
+/* .content { ... } */
+/* .content h1 { ... } */
+/* .content p { ... } */
+/* .content .char { ... } */ 

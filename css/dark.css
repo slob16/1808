@@ -1,0 +1,205 @@
+body{
+  color: #888888;
+  background: #303740;
+}
+
+::-webkit-scrollbar{
+  background: #20252b;
+}
+
+
+.loader{
+  background: #303740;
+}
+
+.navbar.affix{
+  background: #20252b;
+}
+
+.navbar-2 .navbar-bg{
+  background: #20252b;
+}
+
+.navbar .brand-img-white{
+  display: inline-block;
+}
+
+.brand{
+  color: #e8ecef;
+}
+
+a.brand:hover,
+a.brand:focus{
+  text-decoration: none;
+  color: #e8ecef;
+}
+
+.brand-text{
+  color: #9aa1a9;
+}
+
+.navigation ul li a{
+  color: #e8ecef;
+}
+
+.navbar-spacer{
+  background: #4a525c;
+}
+
+.social-list a{
+  color: #e8ecef;
+}
+
+.navbar-toggle .icon-bar{
+  background: #e8ecef;
+}
+
+.close-menu{
+  color: #e8ecef;
+}
+
+.menu{
+  background: #303740;
+}
+
+.mobile-menu ul li a{
+  color: #7a8189;
+}
+
+.mobile-menu ul .active > a, 
+.mobile-menu ul .active, 
+.mobile-menu ul li a:hover{
+  color:#e8ecef;
+  text-decoration: none;
+}
+
+.menu-footer .copy{
+  color: #e8ecef;
+}
+
+.menu-footer .social-list a{
+  color:#8a9199;
+}
+
+.jumbotron{
+  background: #303740;
+}
+
+h2, .h2,
+h3, .h3,
+h4, .h4{
+  color: #e8ecef;
+}
+
+.experience-number,
+.experience-info{
+  color: #e8ecef;
+}
+
+.dots-image .dots{
+  background: url(../images/bg/dots-dark.png) 0 0 repeat;
+}
+
+.bg-dots {
+  background: url(../images/bg/dots2-dark.png) 0 0 repeat;
+}
+
+.info-title{
+  color: #e8ecef;
+}
+
+.zoom-anim-dialog{
+  background: #303740;
+}
+
+.mfp-close-btn-in .mfp-close{
+  color: #e8ecef;
+}
+
+.project-detail-list li {
+  border-bottom: 1px solid #4a525c;
+}
+
+.col-service{
+  color: #9aa1a9;
+}
+
+.col-service .icon{
+  color: #e8ecef;
+}
+
+.filter{
+  color: #e8ecef;
+}
+
+.client-box {
+  color: #b0b7c0;
+  background-color: #303740;
+}
+
+.client-name{
+  color: #e8ecef;
+}
+
+.add-new-text{
+  color: #e8ecef;
+}
+
+.footer,
+.footer ul li a{
+  color: #e8ecef;
+}
+
+input[type='text'], 
+input[type='address'], 
+input[type='url'], 
+input[type='password'], 
+input[type='email'], 
+input[type="search"], 
+input[type="tel"], 
+textarea{
+  color: #e8ecef;
+  background: #303740;
+  border:0;
+}
+
+input.input-gray, textarea.input-gray{
+  background: #303740;
+}
+
+input.input-gray:focus,
+textarea.input-gray:focus{
+  background: #303740;
+}
+
+.pagepiling .section{
+  background: #303740;
+}
+
+.dots-image-2 .dots{
+  background: url(../images/bg/dots-dark.png) 0 0 repeat;
+}
+
+.col-partner img {
+  opacity: 0.4;
+}
+
+.contact-info-row strong{
+  color: #e8ecef;
+}
+
+.col-contact-info{
+  border-top-color:#4a525c;
+}
+
+@media (min-width: 992px){
+.col-contact-info:nth-child(2n) {
+    border-left: 1px solid #4a525c;
+}
+
+@media (min-width: 1200px){
+  .col-contact-info {
+      border-left: 1px solid #4a525c;
+  }
+}
+}
