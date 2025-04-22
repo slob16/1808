@@ -1766,7 +1766,8 @@ opacity: 0.8;
 
 .copy-bottom{
   /* display: none; */ /* Removed */
-  position: absolute;
+  /* position: absolute; */ /* Changed */
+  position: fixed; /* Changed to fixed */
   z-index: 101; /* Increased z-index */
   left:0;
   bottom:2.4rem;
@@ -1775,7 +1776,8 @@ opacity: 0.8;
 
 .lang-bottom{
   /* display: none; */ /* Removed */
-  position: absolute;
+  /* position: absolute; */ /* Changed */
+  position: fixed; /* Changed to fixed */
   z-index: 101; /* Increased z-index */
   right:0;
   bottom:2.4rem;
