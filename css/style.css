@@ -1765,18 +1765,18 @@ opacity: 0.8;
 }
 
 .copy-bottom{
-  display: none;
+  /* display: none; */ /* Removed */
   position: absolute;
-  z-index: 10;
+  z-index: 101; /* Increased z-index */
   left:0;
   bottom:2.4rem;
   color: #1c2526;
 }
 
 .lang-bottom{
-  display: none;
+  /* display: none; */ /* Removed */
   position: absolute;
-  z-index: 10;
+  z-index: 101; /* Increased z-index */
   right:0;
   bottom:2.4rem;
   color: #1c2526;
@@ -1883,8 +1883,8 @@ opacity: 0.8;
 
 .pagepiling .section{
   background: #c0c0c0;
-  padding-top: 11.3rem;
-  padding-bottom: 7rem;
+  /* padding-top: 11.3rem; */ /* Removed */
+  /* padding-bottom: 7rem; */ /* Removed */
 }
 
 .pagepiling .section-1.pp-scrollable .vertical-centred{
@@ -1904,28 +1904,35 @@ opacity: 0.8;
 .scroll-wrap{
   position: relative;
   min-height: 100%;
+  height: 100%; /* Ensure full height for flex */
+  display: flex; /* Use Flexbox */
+  align-items: center; /* Vertically center content */
 }
 
 .scrollable-content{
-  white-space: nowrap;
-  width: 100%;
-  font-size: 0;
+  /* white-space: nowrap; */ /* Removed */
+  width: 100%; /* Keep width 100% */
+  /* font-size: 0; */ /* Removed, might interfere */
 }
 
-.scrollable-content:before{
+/* Removed ::before pseudo-element rule */
+/* .scrollable-content:before{
   content: '';
   display: inline-block;
   height: 100vh;
   vertical-align: middle;
-}
+} */
 
 .vertical-centred{
   width: 100%;
-  height: 100%;
-  display: inline-block;
-  vertical-align: middle;
-  white-space: normal;
-  font-size: 1rem;
+  /* height: 100%; */ /* Height handled by flex container */
+  /* display: inline-block; */ /* Removed */
+  /* vertical-align: middle; */ /* Removed */
+  white-space: normal; /* Keep */
+  font-size: 1rem; /* Keep */
+  /* Add back padding here if needed, or ensure it's still applied by a parent rule */
+  padding-top: 11.3rem;
+  padding-bottom: 7rem;
 }
 
 .boxed-inner{

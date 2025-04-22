@@ -317,6 +317,7 @@
       /* Page Piling Init */
       $('.pagepiling').pagepiling({
         scrollingSpeed: 280,
+        keyboardScrolling: true,
         menu: '.menu-pagepiling',
         anchors: ['main', 'about', 'projects', 'partners', 'testimonials', 'contacts'],
         afterLoad: function(anchorLink, index) {
